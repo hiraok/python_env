@@ -6,12 +6,12 @@ import sqlite3
 from bs4 import BeautifulSoup
 
 # remoteOpen
-url = "http://www.moukotanmen-nakamoto.com/n_menu"
-html = urllib.request.urlopen(url)
-soup = BeautifulSoup(html.read(), "html.parser")
+# url = "http://www.moukotanmen-nakamoto.com/n_menu"
+# html = urllib.request.urlopen(url)
+# soup = BeautifulSoup(html.read(), "html.parser")
 
 # localOpen
-# soup = BeautifulSoup(open("/Users/hiraok/projects/python_env/nakamoto.html"), "lxml")
+soup = BeautifulSoup(open("./nakamoto.html"), "lxml")
 
 thumbs = soup.find_all('img', class_="attachment-large wp-post-image")
 post_contents = soup.find_all('div', class_="post_content")
